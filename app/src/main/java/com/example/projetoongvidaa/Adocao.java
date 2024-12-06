@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Adocao extends AppCompatActivity {
 
     private Button toCadastro;
+    private Button backMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,14 @@ public class Adocao extends AppCompatActivity {
             return insets;
         });
 
-
+        backMain = findViewById(R.id.returnHome);
+        backMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Adocao.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         toCadastro = findViewById(R.id.adotar);
         toCadastro.setOnClickListener(new View.OnClickListener() {

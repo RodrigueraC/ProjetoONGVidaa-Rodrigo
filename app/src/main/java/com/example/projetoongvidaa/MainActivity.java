@@ -32,15 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toAdocao2 = findViewById(R.id.adotar2);
-        toAdocao2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Adocao.class);
-                startActivity(intent);
-            }
-        });
-
 
 
         // Initialize ViewPager2
